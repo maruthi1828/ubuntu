@@ -1,0 +1,22 @@
+##############################Login to Server #################################
+sudo yum update -y 
+***Download Jenkins
+https://pkg.jenkins.io/redhat-stable/
+sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+**** Repo location  cd /etc/yum.repos.d/jenkins.repo
+sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+sudo amazon-linux-extras install epel -y
+yum install java-1.8.0-openjdk -y 
+yum install git -y
+yum install maven -y
+git --version
+mvn --version
+yum install jenkins -y 
+sudo systemctl restart jenkins
+sudo systemctl status jenkins
+*********copy Public address and paste on browser with port 8080
+cat /var/lib/jenkins/secrets/initialAdminPassword
+**********copy the password on Browser
+Click next >> Install suggested Pulgins
+
+
